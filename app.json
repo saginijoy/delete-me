@@ -8,14 +8,14 @@
     "test": {
       "addons": ["heroku-postgresql:in-dyno"],
       "scripts": {
-        "test": "./gradlew jacocoTestCoverageVerification"
+        "test": "./gradlew jacocoTestCoverageVerification --debug"
       }
     }
   },
   "formation": {
   },
   "addons": [
-    "heroku-postgresql"
+    "heroku-postgresql:hobby-dev"
   ],
   "buildpacks": [
 
