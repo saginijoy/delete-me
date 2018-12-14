@@ -11,7 +11,7 @@ spring:
     maxIdle: 5
     minIdle: 2
     removeAbandoned: true
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/covr-test}
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/covr-prod}
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
