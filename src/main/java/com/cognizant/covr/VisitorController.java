@@ -7,21 +7,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collections;
-
 @RestController
-final class CovrController {
+final class VisitorController {
 
-	@GetMapping("/")
-	Iterable<?> list() {
-		return Collections.emptyList();
+	private final VisitorRepository visitorRepository;
+
+	VisitorController(final VisitorRepository visitorRepository) {
+		this.visitorRepository = visitorRepository;
 	}
 
 	@PostMapping("/")
-	String echo(@RequestBody String newItem){
+	Visitor create(@RequestBody final Visitor newVisitor) {
+		return visitorRepository.save(newVisitor);
+	}
 
-		return newItem;
-
+	@GetMapping("/")
+	Iterable<Visitor> list() {
+		return visitorRepository.findAll();
 	}
 }
 

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CovrApplication {
+public class VisitorApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CovrApplication.class, args);
+	public static void main(final String... args) {
+		SpringApplication.run(VisitorApplication.class, args);
 	}
 
 }
