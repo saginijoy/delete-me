@@ -8,7 +8,7 @@
     "test": {
       "addons": ["heroku-postgresql:in-dyno"],
       "scripts": {
-        "test": "gradlew jacocoTestCoverageVerification"
+        "test": "./gradlew jacocoTestCoverageVerification"
       }
     }
   },
