@@ -119,4 +119,22 @@ public final class VisitorControllerTest {
 
 	private static class ListOfVisitor extends TypeReference<List<Visitor>> {
 	}
+
+	@Test
+	public void returnRequestCounter() throws Exception {
+		// Setup
+		VisitorCounter.setCounter(0);
+		// Exercise
+		final String response = mockMvc.perform(get("/counter"))
+				.andExpect(status().isOk())
+				.andReturn()
+				.getResponse()
+				.getContentAsString();
+		int actual = Integer.parseInt(response);
+
+
+
+		// Assert
+		assertThat(actual, is(1));
+	}
 }

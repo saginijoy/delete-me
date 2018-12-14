@@ -25,5 +25,13 @@ final class VisitorController {
 	Iterable<Visitor> list() {
 		return visitorRepository.findAll();
 	}
+
+	@GetMapping("/counter")
+	int incrementCounter(){
+
+
+		return VisitorCounter.incrementCounterAndGet();
+
+	}
 }
 
